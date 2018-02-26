@@ -1,0 +1,12 @@
+var numbers = [1,2,3,4,5,6,7];
+var length = numbers.length;
+var halfLength = length/2;
+
+for (var head = 0; head < Math.floor(halfLength); head++) {
+    var middle = Math.ceil(halfLength) + head;
+    var tempvalue = numbers[head];
+    numbers[head] = numbers[middle];
+    numbers[middle] = tempvalue;
+}
+
+document.getElementById("myid").value = numbers;
